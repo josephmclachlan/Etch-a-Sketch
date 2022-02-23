@@ -16,11 +16,11 @@
         <p class="container" id="description">Pick your grid, punch in your color, and ride the wave</p>
         <div class="container" id="selector_container">
             <div class="container" id="selectors">
-                <button class="selectors_color">Black</button>
-                <button class="selectors_color">Greyscale</button>
-                <button class="selectors_color">Cyberpunk</button>
-                <button class="selectors_color">Eraser</button>
-                <button class="selectors_color">Pick</button>
+                <button class="selectors_color" value="black">Black</button>
+                <button class="selectors_color" value="cyberpunk">Cyberpunk</button>
+                <button class="selectors_color" value="rgba(57,50,154,1)">Eraser</button>
+                <button class="selectors_color" value="pick">Pick</button>
+                <button class="selectors_color" value="greyscale">Greyscale</button>
                 </div>
         </div>
         <div class="container" id="grid_outer">
@@ -32,7 +32,8 @@
         </div>
         <div class="container" id="slider-container">
             <h2 id="slider-label">Grid Size</h2>
-            <input type="range" min="4" max="100" value="15" id="slider">
+            <input type="range" value="16" min="1" max="64"  id="slider">
+            <div id="grid-size">16x16</div>
         </div>
         <div class="space"></div>
         <footer class="container" id="footer"> <h3>by Joseph McLachlan</h3></footer>
