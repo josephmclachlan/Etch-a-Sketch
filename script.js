@@ -14,6 +14,10 @@ let gridSize = document.getElementById("grid-size")
 
 let cyberpunkColor = ["#ff124f", "#ff00a0", "fe75fe", "#7a04eb", "#120458"]
 
+let pickBtn = document.getElementById('color-picker');
+
+pickBtn.addEventListener('change', changeColor);
+
 for (const i of btn) {
 i.addEventListener('click', changeColor)
 }
@@ -21,13 +25,19 @@ i.addEventListener('click', changeColor)
 slider.addEventListener('input', sliderEvent)
 
 function sliderEvent() {
+    colorSelection = "rgba(57,50,154,1)"
     updateCounter(this.value);
     clearGrid();
     createGrid(this.value);
 }
 
 function changeColor() {
+    if(this.value === 'pick'){
+        let inputColor = document.getElementById("color-picker").value
+        colorSelection = inputColor;
+    } else {
     colorSelection = this.value;
+    }
 }
 
 head.appendChild(style);

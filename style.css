@@ -83,6 +83,12 @@ button {
     background-color: rgba(57,50,154,1);
 }
 
+#color-picker{
+border: none;
+height: 15px;
+width: 15px;
+}
+
 #app-title,
 #description,
 #slider-label,
