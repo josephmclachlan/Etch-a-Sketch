@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="./grid.css">
+    <script src="./grid.js" defer></script>
+</head>
+<body>
+
+     <!-- this doc uses BEM (block element modifier) syntax. block 
+        (heading), element (heading_right-links), modifier 
+        (heading_right-links--red)-->
+
+    <h1 id="app-title">Etch a Sketch</h1>
+    <p id="description">Pick your grid, punch in your color, and ride the color wave</p>
+    <div id="selectors">
+        <button class="selectors_color">Black</button>
+        <button class="selectors_color">Greyscale</button>
+        <button class="selectors_color">Cyberpunk</button>
+        <button class="selectors_color">Eraser</button>
+        <button class="selectors_color">Pick</button>
+    </div>
+    <div id="grid_outer">
+        <div id="grid_inner">
+
+        </div>
+    </div>
+
+</body>
+</html>
