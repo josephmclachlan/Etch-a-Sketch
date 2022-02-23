@@ -5,19 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body onload="createGrid(16)">
-    <div class="container" id="page-container">
     <h1 class="container" id="app-title">Etch a Sketch</h1>
-        <p class="container" id="description">Pick your grid, punch in your color, and ride the color wave</p>
-        <div class="container" id="selectors">
-            <button class="selectors_color">Black</button>
-            <button class="selectors_color">Greyscale</button>
-            <button class="selectors_color">Cyberpunk</button>
-            <button class="selectors_color">Eraser</button>
-            <button class="selectors_color">Pick</button>
+        <p class="container" id="description">Pick your grid, punch in your color, and ride the wave</p>
+        <div class="container" id="selector_container">
+            <div class="container" id="selectors">
+                <button class="selectors_color">Black</button>
+                <button class="selectors_color">Greyscale</button>
+                <button class="selectors_color">Cyberpunk</button>
+                <button class="selectors_color">Eraser</button>
+                <button class="selectors_color">Pick</button>
+                </div>
         </div>
         <div class="container" id="grid_outer">
             <div id="grid_container">
@@ -26,11 +30,11 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="slider-container">
+            <h2 id="slider-label">Grid Size</h2>
             <input type="range" min="4" max="100" value="15" id="slider">
         </div>
         <div class="space"></div>
         <footer class="container" id="footer"> <h3>by Joseph McLachlan</h3></footer>
-    </div>
 </body>
 </html>

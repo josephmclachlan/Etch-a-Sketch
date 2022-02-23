@@ -3,11 +3,20 @@
     margin: 0;
 }
 
-#page-container {
+body{
+    font-family: 'Orbitron', sans-serif;
+    background: rgb(11,15,36);
+    background: linear-gradient(180deg, rgba(11,15,36,1) 0%, rgba(49,44,134,1) 31%, rgba(57,50,154,1) 76%, rgba(195,40,182,1) 84%, rgba(194,40,183,1) 89%, rgba(186,35,189,0.9738095067128414) 96%, rgba(252,70,139,0.9429971817828694) 100%);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr 15fr 1fr 10fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 15fr 1fr 5fr 1fr;
+    box-sizing: border-box;
+    line-height: 1em;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 10vh;
 }
+
 
 .container{
     display: flex;
@@ -15,11 +24,34 @@
     justify-content: center;
 }
 
+#slider-container {
+    flex-direction: column;
+    gap: 5px;
+}
+
 #selectors {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
+    
+}
+
+button {
+    font-family: 'Orbitron', sans-serif;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.8rem #bc13fe,
+                0 0 2.8rem #bc13fe,
+                inset 0 0 1.3rem #bc13fe;
+    }
+
+#selector_container,
+#description {
+    margin: 3px;
 }
 
 #grid_container {
@@ -30,7 +62,16 @@
 
 }
 
-#slider {
+#app-title,
+#description,
+#slider-label {
+    color: #fff;
+    animation: neonPurple 1.5s ease-in-out infinite alternate;
+}
+
+
+#slider,
+#selectors {
     width: 75vw;
     max-width: 600px;
 }
@@ -51,3 +92,28 @@
     align-self: end;
     padding-bottom: 10px;
 }
+
+@keyframes neonPurple {
+    from {
+      text-shadow: 
+        0 0 10px #fff, 
+        0 0 20px #fff, 
+        0 0 30px #fff, 
+        0 0 40px #ff00de,
+        0 0 70px #ff00de, 
+        0 0 80px #ff00de, 
+        0 0 100px #ff00de, 
+        0 0 150px #ff00de;
+    }
+    to {
+      text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 15px #fff, 
+        0 0 20px #ff00de,
+        0 0 35px #ff00de, 
+        0 0 40px #ff00de, 
+        0 0 50px #ff00de, 
+        0 0 75px #ff00de;
+    }
+  }
