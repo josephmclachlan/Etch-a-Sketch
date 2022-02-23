@@ -9,26 +9,28 @@
     <script src="./script.js" defer></script>
 </head>
 <body onload="createGrid(16)">
-    <div id="page-container">
-        <h1 id="app-title">Etch a Sketch</h1>
-        <p id="description">Pick your grid, punch in your color, and ride the color wave</p>
-        <div id="selectors">
+    <div class="container" id="page-container">
+    <h1 class="container" id="app-title">Etch a Sketch</h1>
+        <p class="container" id="description">Pick your grid, punch in your color, and ride the color wave</p>
+        <div class="container" id="selectors">
             <button class="selectors_color">Black</button>
             <button class="selectors_color">Greyscale</button>
             <button class="selectors_color">Cyberpunk</button>
             <button class="selectors_color">Eraser</button>
             <button class="selectors_color">Pick</button>
         </div>
-        <div id="grid_outer">
+        <div class="container" id="grid_outer">
             <div id="grid_container">
                 <div id="grid_inner">
 
                 </div>
             </div>
         </div>
+        <div class="container">
+            <input type="range" min="4" max="100" value="15" id="slider">
+        </div>
+        <div class="space"></div>
+        <footer class="container" id="footer"> <h3>by Joseph McLachlan</h3></footer>
     </div>
-    <div class="space">
-    </div>
-    <footer><h3> by Joseph McLachlan</h3></footer>
 </body>
 </html>
