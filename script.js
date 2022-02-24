@@ -36,7 +36,8 @@ function changeColor() {
         let inputColor = document.getElementById("color-picker").value
         colorSelection = inputColor;
     } else if (this.value === 'eraser') {
-        clearColor()
+        colorSelection = "rgba(57,50,154,1)";
+        clearColor();
     }else {
     colorSelection = this.value;
     }
