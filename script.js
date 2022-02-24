@@ -100,9 +100,9 @@ function rgbDarken(value) {
         rgbValue = Number(rgbValue);
         rgbValue += .1;
         cellData.style.backgroundColor = `rgb(0,0,0,${rgbValue}`;
-    }elseif (celldata.style.backgroundColor= 'rgb(0,0,0,1)'){
+    } elseif (cellData.style.backgroundColor= 'rgb(0,0,0,1)'){
         return;
-    }else {
+    } else {
         cellData.classList.add("grey");
         cellData.style.backgroundColor = "rgb(0,0,0,.1)"
     }
