@@ -35,8 +35,17 @@ function changeColor() {
     if(this.value === 'pick'){
         let inputColor = document.getElementById("color-picker").value
         colorSelection = inputColor;
-    } else {
+    } else if (this.value === 'eraser') {
+        clearColor()
+    }else {
     colorSelection = this.value;
+    }
+}
+
+function clearColor() {
+    let gridCells = document.getElementsByClassName('cell');
+    for (const i of gridCells) {
+        i.style.backgroundColor = "rgba(57,50,154,1)";
     }
 }
 
@@ -95,7 +104,10 @@ function paintColor(){
 
 function rgbDarken(value) {
     let cellData = value;
-    if (cellData.classList.contains('grey')) {
+    console.log(cellData.style.backgroundColor);
+    if (cellData.classList.contains('grey') && cellData.style.backgroundColor === "rgb(0, 0, 0)") {
+        return;
+    } else if (cellData.classList.contains('grey')) {
         let rgbValue = cellData.style.backgroundColor.toString().slice(-3,-1);
         rgbValue = Number(rgbValue);
         rgbValue += .1;
